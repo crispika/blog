@@ -5,7 +5,7 @@ header-img: img/home-bg.jpg
 email: eliyaw0311@gmail.com
 description: "慢慢地奔跑| 桃子Eliya，Web & Mobile Lover| 这里是 桃子Eliya 的个人博客，让我们一起慢慢远行。"
 keyword: "桃子Eliya的博客, Hux Blog, 博客, 个人网站, 互联网, Web, JavaScript, 前端"
-url: "https://huangxuan.me"              # your host, for absolute URL
+url: ""              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 # Publish posts or collection documents with a future date.
