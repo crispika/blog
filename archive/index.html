@@ -11,16 +11,16 @@
     <meta name="theme-color" content="#000000">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="桃子Eliya的博客 | Crispika Blog">
+    <meta property="og:title" content="Archive - 桃子Eliya的博客 | Crispika Blog">
     
     <meta property="og:type" content="website">
-    <meta property="og:description" content="问渠哪得清如许，为有源头活水来.">
+    <meta property="og:description" content="keep hungry keep foolish">
     
     <meta property="og:image" content="http://localhost:4000/img/avatar-eliya.jpg">
-    <meta property="og:url" content="http://localhost:4000/">
+    <meta property="og:url" content="http://localhost:4000/archive/">
     <meta property="og:site_name" content="桃子Eliya的博客 | Crispika Blog">
     
-    <title>桃子Eliya的博客 | Crispika Blog</title>
+    <title>Archive - 桃子Eliya的博客 | Crispika Blog</title>
 
     <!-- Web App Manifest -->
     <link rel="manifest" href="/pwa/manifest.json">
@@ -29,7 +29,7 @@
     <link rel="shortcut icon" href="/img/favicon.ico">
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="http://localhost:4000/">
+    <link rel="canonical" href="http://localhost:4000/archive/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -163,7 +163,11 @@
 </script>
 
 
-    <!-- Page Header -->
+    <!-- 
+Credits: this page shamelessly borrowed a lot from:
+https://github.com/kitian616/jekyll-TeXt-theme
+-->
+<!-- Page Header -->
 
 
 
@@ -171,15 +175,15 @@
 
 
 
-<header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
+<header class="intro-header" style="background-image: url('/img/tag-bg.jpg')">
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         
-        <div class="site-heading">
+        <div class="site-heading" id="tag-heading">
         
-          <h1>Crispika Blog</h1>
-          <span class="subheading">问渠哪得清如许，为有源头活水来.</span>
+          <h1>Archive</h1>
+          <span class="subheading">keep hungry keep foolish</span>
         </div>
       </div>
     </div>
@@ -190,101 +194,25 @@
 <!-- Main Content -->
 <div class="container">
 	<div class="row">
+		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+			<!-- Tags (as filter) -->
+			<div id='tag_cloud' class="tags tags-sup js-tags">
+				<a class="tag-button--all" data-encode="">
+					Show All
+					<sup>0</sup>
+				</a>
+
+				
         
+				
+				
+			</div>
 
-<!-- USE SIDEBAR -->
-    <!-- PostList Container -->
-    		<div class="
-                col-lg-8 col-lg-offset-1
-                col-md-8 col-md-offset-1
-                col-sm-12
-                col-xs-12
-                postlist-container
-            ">
-    			
-
-<!-- Pager -->
-
-
-    		</div>
-    <!-- Sidebar Container -->
-            <div class="
-                col-lg-3 col-lg-offset-0
-                col-md-3 col-md-offset-0
-                col-sm-12
-                col-xs-12
-                sidebar-container
-            ">
-                <!-- Featured Tags -->
-                
-
-
-<section>
-    
-    <h5><a href="/archive/">FEATURED TAGS</a></h5>
-    <div class="tags">
-        
-        
-        
-        
-        
-    </div>
-</section>
-
-
-                <!-- Short About -->
-                <section class="visible-md visible-lg">
-  <hr>
-  <h5><a href="/about/">ABOUT ME</a></h5>
-  <div class="short-about">
-    
-    <img src="/img/avatar-eliya.jpg" />
-    
-    
-    <p>仰望星空的蜗牛，慢慢地奔跑。</p>
-    
-    <!-- SNS Link -->
-    
-
-
-<ul class="list-inline">
-
-
-  
-  
-  
-  
-  
-  
-  <li>
-    <a target="_blank" href="https://github.com/crispika">
-      <span class="fa-stack fa-lg">
-        <i class="fa fa-circle fa-stack-2x"></i>
-        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-      </span>
-    </a>
-  </li>
-  
-  
-</ul>
-  </div>
-</section>
-
-                <!-- Friends Blog -->
-                
-<hr>
-<h5>FRIENDS</h5>
-<ul class="list-inline">
-  
-  <li><a href="http://su.gallery/">Su</a></li>
-  
-</ul>
-
-    		</div>
-        
+            <!-- Article List -->
+			<div class="mini-post-list js-result d-none">
+		</div>
 	</div>
 </div>
-
 
 
     <!-- Footer -->
@@ -382,6 +310,18 @@
 
 
 
+
+<!-- jquery.tagcloud.js -->
+<script>
+    async('/js/jquery.tagcloud.js', function () {
+        $.fn.tagcloud.defaults = {
+            //size: {start: 1, end: 1, unit: 'em'},
+            color: { start: '#bbbbee', end: '#2f93b4' },
+        };
+        $('#tag_cloud a').tagcloud();
+    })
+</script>
+<script src='/js/archive.js '></script>
 
 
 <!--fastClick.js -->
